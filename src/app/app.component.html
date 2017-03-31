@@ -1,0 +1,21 @@
+
+
+<div mnFullpage
+     [mnFullpageNavigation]="true"
+     [mnFullpageKeyboardScrolling]="true"
+     [mnFullpageSlidesNavigation]="true"
+     [mnFullpageControlArrows]="true"
+>
+
+    <!--    <div class="section " id="section0"><h1>fullPage.js</h1></div>
+        <div class="section" id="section2"><h1>Lovely images <br />for a lovely page</h1></div>
+        <div class="section" id="section3"><h1>One Image = One thousand words</h1></div>
+   -->
+      <div *ngFor="let user of users"
+           class="section"
+           id="section{{user.age}}">
+          <h1>{{user.name}}</h1>
+      </div>
+
+
+</div>
