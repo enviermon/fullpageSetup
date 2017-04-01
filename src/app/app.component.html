@@ -11,11 +11,12 @@
         <div class="section" id="section2"><h1>Lovely images <br />for a lovely page</h1></div>
         <div class="section" id="section3"><h1>One Image = One thousand words</h1></div>
    -->
-      <div *ngFor="let user of users"
-           class="section"
-           id="section{{user.age}}">
-          <h1>{{user.name}}</h1>
-      </div>
+      <div *ngFor="let hero of heroes" class="section" id="section{{hero.id}}">
+           <h1>{{hero.name}}</h1>
+           <div class ="what" id="testdiv"> ease</div>
+        </div>
 
 
-</div>
+
+
+  </div>

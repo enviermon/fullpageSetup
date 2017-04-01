@@ -1,5 +1,5 @@
 /* Style for our header texts
-	* --------------------------------------- */
+	* ---------------------------------------*/
 h1{
   font-size: 5em;
   font-family: arial,helvetica;
@@ -9,24 +9,20 @@ h1{
 }
 
 /* Centered texts in each section
-* --------------------------------------- */
+* ---------------------------------------*/
 .section{
   text-align:center;
 }
 
 
 /* Backgrounds will cover all the section
-* --------------------------------------- */
+* ---------------------------------------*/
 .section{
   background-size: cover;
 }
 
-.slide{
-  background-size: cover;
-}
-
 /* Defining each sectino background and styles
-* --------------------------------------- */
+* ---------------------------------------*/
 #section0{
   background-image: url(https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/bg1.jpg);
 }
@@ -44,20 +40,28 @@ h1{
 }
 
 
-/*Adding background for the slides
-* --------------------------------------- */
-#slide1{
-  background-image: url(https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/bg2.jpg);
-  padding: 6% 0 0 0;
-}
-#slide2{
-  background-image: url(https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/bg5.jpg);
-  padding: 6% 0 0 0;
+.what{
+  width: 100px;
+  height: 50px;
+  bottom:0;
+  right:0;
+  position: absolute;
+  background-color: yellowgreen;
+  -webkit-animation: mymove 3s;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: ease; /* Safari 4.0 - 8.0 */
+  animation: mymove 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {bottom: 0px;}
+  to {bottom: 200px;}
+}
 
-/* Bottom menu
-* --------------------------------------- */
-#infoMenu li a {
-  color: #fff;
+@keyframes mymove {
+  from {bottom: 0px;}
+  to {bottom: 200px;}
 }
