@@ -1,0 +1,57 @@
+
+
+<h1>home</h1>
+<!--<style>-->
+    <!--.cmp {-->
+        <!--border: blue 2px solid;-->
+    <!--}-->
+<!--</style>-->
+<!--<ul>-->
+    <!--<li *ngFor="let hero of heroes">-->
+        <!--<span>{{hero.id}}</span>-->
+        <!--<span>{{hero.name}}</span>-->
+    <!--</li>-->
+<!--</ul>-->
+
+<div mnFullpage
+     [mnFullpageNavigation]="true"
+     [mnFullpageKeyboardScrolling]="true"
+     [mnFullpageSlidesNavigation]="false"
+     [mnFullpageControlArrows]="false"
+>
+    <!--<div class="section " id="section0">-->
+        <!--<h1>fullPage.js</h1>-->
+        <!--<div style="background-color: aqua" routerLink="/about" routerLinkActive="active"> ease</div>-->
+
+    <!--</div>-->
+    <!--<div class="section" id="section2"><h1>Lovely images <br />for a lovely page</h1>-->
+
+
+    <!--</div>-->
+    <!--<div class="section" id="section3"><h1>One Image = One thousand words</h1></div>-->
+
+    <div *ngFor="let hero of heroes" class="section" id="section{{hero.id}}">
+        <h1>{{hero.name}}</h1>
+        <div style="background-color: aqua" [routerLink]="['/about', hero.id]"> ease</div>
+        <!--<a [routerLink]="['/about', 1]">id: 1</a>-->
+    </div>
+
+
+</div>
+
+<!--<div id="fp-nav" class="right">-->
+    <!--<ul>-->
+        <!--<li>-->
+            <!--<a href="#" >-->
+                <!--<span></span>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a href="#">-->
+                <!--<span></span>-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+<!--<div id="fp-nav" class="right" style="margin-top: -33.4872px;"><ul><li><a href="#" class="active"><span></span></a></li><li><a href="#"><span></span></a></li><li><a href="#"><span></span></a></li></ul></div>-->

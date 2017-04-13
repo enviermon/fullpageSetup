@@ -1,22 +1,9 @@
+<nav>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <!--<a routerLink="/about" routerLinkActive="active">About (lazy)</a>-->
+  <a [routerLink]="['/about', 1]">id: 1</a>
+  <a [routerLink]="['/about', 2]">id: 2</a>
+</nav>
 
 
-<div mnFullpage
-     [mnFullpageNavigation]="true"
-     [mnFullpageKeyboardScrolling]="true"
-     [mnFullpageSlidesNavigation]="true"
-     [mnFullpageControlArrows]="true"
->
-
-    <!--    <div class="section " id="section0"><h1>fullPage.js</h1></div>
-        <div class="section" id="section2"><h1>Lovely images <br />for a lovely page</h1></div>
-        <div class="section" id="section3"><h1>One Image = One thousand words</h1></div>
-   -->
-      <div *ngFor="let hero of heroes" class="section" id="section{{hero.id}}">
-           <h1>{{hero.name}}</h1>
-           <div class ="what" id="testdiv"> ease</div>
-        </div>
-
-
-
-
-  </div>
+<router-outlet></router-outlet>

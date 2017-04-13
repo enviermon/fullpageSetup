@@ -163,16 +163,18 @@ export class MnFullpageDirective implements OnInit, OnChanges , AfterViewInit{
     }
 
     callme() {
-        console.log('hi from directive');
-        console.log(this._el.nativeElement);
+        // console.log('hi from directive');
+        // console.log(this._el.nativeElement);
         (<any>$)(this._el.nativeElement).fullpage(this.options);
+        console.log(this._el.nativeElement);
+        // console.log(this.options)
     }
 
     /**
      * Perform actions on init
      */
         ngOnInit(): void {
-            console.log("directive ngOnInit");
+            // console.log("directive ngOnInit");
         /**
          * Initialize options object with default (empty)
          * values if it doesn't exist
@@ -212,7 +214,7 @@ export class MnFullpageDirective implements OnInit, OnChanges , AfterViewInit{
              * Set property value to the options object property
              */
             this.options[option] = this[property];
-           // console.log(this._el.nativeElement);
+            // console.log(property);
         }
         /**
          * Enable fullpage for the element
